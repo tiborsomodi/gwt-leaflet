@@ -197,4 +197,8 @@ public class Map extends JSObjectWrapper implements EventProvider {
         MapImpl.panInsideBounds(getJSObject(),bounds.getJSObject());
         return this;
     }
+    
+    public MapPanes getPanes(){
+    	return new MapPanes(MapImpl.getPanes(getJSObject()));
+    }
 }

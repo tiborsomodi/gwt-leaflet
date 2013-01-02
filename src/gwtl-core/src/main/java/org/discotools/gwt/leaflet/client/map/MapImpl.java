@@ -1,7 +1,6 @@
 package org.discotools.gwt.leaflet.client.map;
 
 import org.discotools.gwt.leaflet.client.jsobject.JSObject;
-import org.discotools.gwt.leaflet.client.types.Point;
 
 import com.google.gwt.dom.client.Element;
 
@@ -138,7 +137,9 @@ class MapImpl {
         self.panInsideBounds(bound);
     }-*/;
 
-
+    public static native JSObject getPanes(JSObject self) /*-{
+	return self.getPanes();
+	}-*/;
 
 
 
