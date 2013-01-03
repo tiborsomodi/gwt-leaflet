@@ -7,13 +7,13 @@
 
 	<parent>
 		<groupId>org.discotools.gwt.leaflet</groupId>
-		<artifactId>gwtl</artifactId>
-		<version>0.3-SNAPSHOT</version>
+		<artifactId>inepexgwtl</artifactId>
+		<version>0.3.1</version>
 	</parent>
 
-	<artifactId>gwtl-core</artifactId>
+	<artifactId>inepexgwtl-core</artifactId>
 	<packaging>jar</packaging>
-	<name>gwtl-core</name>
+	<name>inepexgwtl-core</name>
 	<url>http://www.discotools.org</url>
 
 	<!-- gwtl-core properties -->
@@ -91,4 +91,11 @@
 
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>inepex</id>
+			<name>Inepex Repository</name>
+			<url>http://maven.inepex.com/content/repositories/thirdparty</url>
+		</repository>
+	</distributionManagement>
 </project>

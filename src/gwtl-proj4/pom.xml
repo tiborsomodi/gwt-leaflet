@@ -4,12 +4,12 @@
 	
 	<parent>
 		<groupId>org.discotools.gwt.leaflet</groupId>
-		<artifactId>gwtl</artifactId>
-		<version>0.3-SNAPSHOT</version>
+		<artifactId>inepexgwtl</artifactId>
+		<version>0.3.1</version>
 	</parent>
 
-	<artifactId>gwtl-proj4</artifactId>
-	<name>gwtl-proj4</name>
+	<artifactId>inepexgwtl-proj4</artifactId>
+	<name>inepexgwtl-proj4</name>
 	<packaging>jar</packaging>
 	
 	<dependencies>
@@ -27,8 +27,8 @@
 		<!-- GWT Leaflet dependencies -->
 		<dependency>
 			<groupId>org.discotools.gwt.leaflet</groupId>
-			<artifactId>gwtl-core</artifactId>
-			<version>0.3-SNAPSHOT</version>
+			<artifactId>inepexgwtl-core</artifactId>
+			<version>0.3.1</version>
 		</dependency>
 		
 	</dependencies>

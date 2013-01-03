@@ -3,33 +3,27 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-
 	<groupId>org.discotools.gwt.leaflet</groupId>
-	<artifactId>gwtl</artifactId>
-	<version>0.3-SNAPSHOT</version>
+	<artifactId>inepexgwtl</artifactId>
+	<version>0.3.1</version>
 	<packaging>pom</packaging>
-	<name>gwtl</name>
+	<name>inepexgwtl</name>
 
 	<!-- Licenses -->
-	<licenses>
+	<!--<licenses>
 		<license>
 			<name>The BSD 3-Clause License</name>
 			<url>http://opensource.org/licenses/BSD-3-Clause</url>
 			<distribution>repo</distribution>
 		</license>
-	</licenses>
+	</licenses>-->
 
 	<!-- Source control management -->
-	<scm>
+	<!--<scm>
 		<connection>scm:git:git@github.com:tiborsomodi/gwt-leaflet.git/src</connection>
 		<developerConnection>scm:git:git@github.com:tiborsomodi/gwt-leaflet.git/src</developerConnection>
 		<url>git@github.com:tiborsomodi/gwt-leaflet.git/src</url>
-	</scm>
+	</scm> -->
 
 	<!-- GWT Leaflet modules -->
 	<modules>
@@ -38,7 +32,6 @@
 		<module>gwtl-widget</module>
 		<module>gwtl-search</module>
 		<module>gwtl-label</module>
-		<module>gwtl-example</module>
 	</modules>
 
 	<properties>
@@ -221,13 +214,13 @@
 							</goals>
 						</execution>
 						<!-- Enable integration tests -->
-						<execution>
+						<!-- <execution>
 							<id>integration-test</id>
 							<phase>integration-test</phase>
 							<goals>
 								<goal>test</goal>
 							</goals>
-						</execution>
+						</execution> -->
 					</executions>
 					<configuration>
 						<!-- Ask GWT to create the Story of Your Compile (SOYC) (gwt:compile) -->
@@ -312,7 +305,7 @@
 				</plugin>
 
 				<!-- GPG plugin -->
-				<plugin>
+				<!-- <plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
 					<executions>
@@ -324,10 +317,10 @@
 							</goals>
 						</execution>
 					</executions>
-				</plugin>
+				</plugin>-->
 
 				<!-- Maven release plugin -->
-				<plugin>
+				<!-- <plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>2.3.2</version>
@@ -342,10 +335,9 @@
 							</configuration>
 						</execution>
 					</executions>
-				</plugin>
-
+				</plugin>-->				
 				<!-- Maven staging plugin -->
-				<plugin>
+				<!--<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
 					<version>1.2</version>
@@ -354,18 +346,18 @@
 						<serverId>sonatype-nexus-staging</serverId>
 						<nexusUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</nexusUrl>
 					</configuration>
-				</plugin>
+				</plugin> -->
 
 				<!-- This plugin's configuration is used to store m2e settings only. -->
 				<!-- It has no influence on the Maven build itself. -->
-				<plugin>
+				<!--<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
 					<version>1.0.0</version>
 					<configuration>
 						<lifecycleMappingMetadata>
 							<pluginExecutions>
-								<!-- gwt-maven-plugin -->
+								
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>org.codehaus.mojo</groupId>
@@ -380,7 +372,7 @@
 										<ignore />
 									</action>
 								</pluginExecution>
-								<!-- maven-gae-plugin -->
+								
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>net.kindleit</groupId>
@@ -394,7 +386,7 @@
 										<execute />
 									</action>
 								</pluginExecution>
-								<!-- nexus staging plugin -->
+								
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>org.apache.maven.plugins</groupId>
@@ -411,7 +403,7 @@
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
-				</plugin>
+				</plugin> -->
 			</plugins>
 		</pluginManagement>
 
@@ -448,5 +440,13 @@
 		</plugins>
 
 	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>inepex</id>
+			<name>Inepex Repository</name>
+			<url>http://maven.inepex.com/content/repositories/thirdparty</url>
+		</repository>
+	</distributionManagement>
 
 </project>
