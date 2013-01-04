@@ -121,7 +121,14 @@ class MapImpl {
     public static native int getZoom(JSObject self) /*-{
         return self.getZoom();
     }-*/;
-
+    
+    public static native int getMaxZoom(JSObject self) /*-{
+    	return self.getMaxZoom();
+	}-*/;
+    
+    public static native int getMinZoom(JSObject self) /*-{
+    	return self.getMinZoom();
+	}-*/;
 
     public static native void invalidateSize(JSObject self, boolean animate) /*-{
         self.invalidateSize( animate);

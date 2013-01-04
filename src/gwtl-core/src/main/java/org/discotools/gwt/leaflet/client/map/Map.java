@@ -169,6 +169,22 @@ public class Map extends JSObjectWrapper implements EventProvider {
     public int getZoom() {
         return MapImpl.getZoom(getJSObject());
     }
+    
+    /**
+     * 
+     * @return Returns the maximum zoom level of the map.
+     */
+    public int getMaxZoom() {
+        return MapImpl.getMaxZoom(getJSObject());
+    }
+    
+    /**
+     * 
+     * @return Returns the minimum zoom level of the map.
+     */
+    public int getMinZoom() {
+        return MapImpl.getMinZoom(getJSObject());
+    }
 
     /**
      * Checks if the map container size changed and updates the map if so — call it after you've changed the map size dynamically. If animate is true, map animates the update
