@@ -34,4 +34,8 @@ public class MapOptions extends Options  {
 	public MapOptions setShowZoomControl(boolean showZoomControl) {
 		return (MapOptions)setProperty("zoomControl", showZoomControl);
     }
+	
+	public MapOptions setShowAttributeControl(boolean showAttributeControl) {
+		return (MapOptions)setProperty("zoomControl", showAttributeControl);
+    }
 }
