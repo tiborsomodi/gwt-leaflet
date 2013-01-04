@@ -35,7 +35,7 @@ public class MapOptions extends Options  {
 		return (MapOptions)setProperty("zoomControl", showZoomControl);
     }
 	
-	public MapOptions setShowAttributeControl(boolean showAttributeControl) {
-		return (MapOptions)setProperty("zoomControl", showAttributeControl);
+	public MapOptions setShowAttributionControl(boolean showAttributionControl) {
+		return (MapOptions)setProperty("attributionControl", showAttributionControl);
     }
 }
