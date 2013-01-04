@@ -5,6 +5,7 @@ import org.discotools.gwt.leaflet.client.events.handler.EventHandler;
 import org.discotools.gwt.leaflet.client.events.handler.EventHandler.Events;
 import org.discotools.gwt.leaflet.client.events.handler.EventHandlerManager;
 import org.discotools.gwt.leaflet.client.map.Map;
+import org.discotools.gwt.leaflet.client.map.MapPaneTypes;
 import org.discotools.gwt.leaflet.client.types.LatLng;
 import org.discotools.gwt.leaflet.client.types.Point;
 
@@ -51,7 +52,7 @@ public class CustomOverlay {
 	private void refresh(){
 		widget.asWidget().removeFromParent();
 		if (latLng != null){
-			PaneAbsolutePanel panel = new PaneAbsolutePanel(map.getPanes().getOverlayPane());
+			PaneAbsolutePanel panel = new PaneAbsolutePanel(map.getPanes().getPane(MapPaneTypes.overlayPane));
 			Point pos = map.latLngToLayerPoint(latLng);
 			panel.add(widget.asWidget(), new Double(pos.x()).intValue(), new Double(pos.y()).intValue());
 		}
