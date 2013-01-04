@@ -30,5 +30,8 @@ public class MapOptions extends Options  {
 	public MapOptions setMaxZoom(int zoom) {
 		return (MapOptions)setProperty("maxzoom", zoom);
     }
-
+	
+	public MapOptions setShowZoomControl(boolean showZoomControl) {
+		return (MapOptions)setProperty("zoomControl", showZoomControl);
+    }
 }
