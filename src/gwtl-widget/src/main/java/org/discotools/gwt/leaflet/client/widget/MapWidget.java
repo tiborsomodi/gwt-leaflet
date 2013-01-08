@@ -21,6 +21,11 @@
  *********************************************************************/
 package org.discotools.gwt.leaflet.client.widget;
 
+import java.util.HashMap;
+
+import org.discotools.gwt.leaflet.client.map.Map;
+import org.discotools.gwt.leaflet.client.map.MapPaneTypes;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 
@@ -30,6 +35,8 @@ import com.google.gwt.user.client.ui.HTMLPanel;
  */
 public class MapWidget extends Composite {
 	
+	private java.util.Map<MapPaneTypes, PaneAbsolutePanel> panelsByPane = new HashMap<MapPaneTypes, PaneAbsolutePanel>();
+	private Map map;
 	/**
 	 * Default constructor
 	 * 
@@ -52,6 +59,23 @@ public class MapWidget extends Composite {
 			"</div>"
 		));
 		
+	}
+	
+	public void init(Map map){
+		this.map = map;
+	}
+	
+	public PaneAbsolutePanel getPanePanel(MapPaneTypes type){
+		checkInit();
+		if(!panelsByPane.containsKey(type)){
+			panelsByPane.put(type, new PaneAbsolutePanel(map.getPanes().getPane(type)));	
+		}
+		return panelsByPane.get(type);
+	}
+	private void checkInit(){
+		if(map == null){
+			throw new RuntimeException("Method init is not called");
+		}
 	}
 
 }
