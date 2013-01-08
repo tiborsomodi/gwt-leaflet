@@ -149,7 +149,9 @@ class MapImpl {
 	}-*/;
 
 
-
+	public static native int getBoundsZoom(JSObject self, JSObject bound, boolean inside) /*-{
+	return self.getBoundsZoom(bound, inside);
+	}-*/;
 
 
 

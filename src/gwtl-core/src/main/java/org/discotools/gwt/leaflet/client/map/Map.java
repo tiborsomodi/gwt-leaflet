@@ -217,4 +217,14 @@ public class Map extends JSObjectWrapper implements EventProvider {
     public MapPanes getPanes(){
     	return new MapPanes(MapImpl.getPanes(getJSObject()));
     }
+    
+    /**
+     * Returns the maximum zoom level on which the given bounds fit to the map view in its entirety. If inside 
+     * (optional) is set to true, the method instead returns the minimum zoom level on which the map view fits 
+     * into the given bounds in its entirety.
+     * @return
+     */
+    public int getBoundsZoom(LatLngBounds bounds, boolean inside) {
+        return MapImpl.getBoundsZoom(getJSObject(), bounds.getJSObject(), inside);
+    }
 }
