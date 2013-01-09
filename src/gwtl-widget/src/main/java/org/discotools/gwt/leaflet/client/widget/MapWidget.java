@@ -77,5 +77,17 @@ public class MapWidget extends Composite {
 			throw new RuntimeException("Method init is not called");
 		}
 	}
+	
+	public void clear(){
+		checkInit();
+		for(PaneAbsolutePanel pane : panelsByPane.values()){
+			pane.clear();
+		}
+	}
+	
+	public Map getMap(){
+		checkInit();
+		return map;
+	}
 
 }
