@@ -22,8 +22,10 @@ public class EventHandlerManager  {
      * @param handler handle event
      * @return registered function in event map listeners
      */
-    public static EventRegisteredFunction addEventHandler(EventProvider eventProvider, Events eventName, EventHandler<?> handler){
-        return addEventHandler(eventProvider.getJSObject(), eventName.name(), handler).cast();
+    public static LeafHandlerRegistration addEventHandler(EventProvider eventProvider, Events eventName, EventHandler<?> handler){
+    	EventRegisteredFunction eventRegisteredFunction = addEventHandler(eventProvider.getJSObject(), eventName.name(), handler).cast();
+    	LeafHandlerRegistration reg = new LeafHandlerRegistration(eventRegisteredFunction, eventName, eventProvider);
+        return reg;
     }
     
 
