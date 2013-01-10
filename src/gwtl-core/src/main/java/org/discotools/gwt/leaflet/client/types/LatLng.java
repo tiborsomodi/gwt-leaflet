@@ -56,6 +56,11 @@ public class LatLng extends JSObjectWrapper {
 		return LatLngImpl.lat(getJSObject());
 	}
 	
+	@Override
+    public int hashCode() {
+		return new Double(lat()).hashCode()*31 + new Double(lng()).hashCode();
+    }
+	
     /**
      * Returns the distance (in meters) to the given LatLng calculated using the Haversine formula. See description on <a href="http://en.wikipedia.org/wiki/Haversine_formula">wikipedia</a>
      * @param otherLatlng
