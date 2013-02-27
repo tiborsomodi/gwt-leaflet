@@ -59,4 +59,9 @@ class LatLngBoundsImpl {
     }-*/;
 
 
+    public static native void pad(JSObject self, int ratio) /*-{
+        self.pad(ratio);
+    }-*/;
+
+
 }

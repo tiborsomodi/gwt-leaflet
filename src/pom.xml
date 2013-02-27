@@ -5,7 +5,7 @@
 
 	<groupId>org.discotools.gwt.leaflet</groupId>
 	<artifactId>inepexgwtl</artifactId>
-	<version>0.3.1</version>
+	<version>0.3.2</version>
 	<packaging>pom</packaging>
 	<name>inepexgwtl</name>
 
@@ -183,10 +183,6 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
 		</dependency>
 	</dependencies>
 
