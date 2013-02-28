@@ -5,7 +5,7 @@
 
 	<groupId>org.discotools.gwt.leaflet</groupId>
 	<artifactId>inepexgwtl</artifactId>
-	<version>0.3.2</version>
+	<version>0.3.3</version>
 	<packaging>pom</packaging>
 	<name>inepexgwtl</name>
 
@@ -28,10 +28,10 @@
 	<!-- GWT Leaflet modules -->
 	<modules>
 		<module>gwtl-core</module>
-		<module>gwtl-proj4</module>
+		<!--<module>gwtl-proj4</module> -->
 		<module>gwtl-widget</module>
-		<module>gwtl-search</module>
-		<module>gwtl-label</module>
+		<!--<module>gwtl-search</module> -->
+		<!--<module>gwtl-label</module>-->
 	</modules>
 
 	<properties>

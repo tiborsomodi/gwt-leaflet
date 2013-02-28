@@ -150,8 +150,7 @@ public class LatLngBounds extends JSObjectWrapper {
 
     }
     
-    public LatLngBounds pad(int ratio){
-    	LatLngBoundsImpl.pad(getJSObject(), ratio);
-    	return this;
+    public LatLngBounds pad(double ratio){
+    	return new LatLngBounds(LatLngBoundsImpl.pad(getJSObject(), ratio));
     }
 }
