@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>org.discotools.gwt.leaflet</groupId>
 			<artifactId>inepexgwtl-core</artifactId>
-			<version>0.3.1</version>
+			<version>0.3.3</version>
 		</dependency>
 
 	</dependencies>
