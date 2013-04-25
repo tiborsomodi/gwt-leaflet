@@ -5,7 +5,7 @@
 
 	<groupId>org.discotools.gwt.leaflet</groupId>
 	<artifactId>inepexgwtl</artifactId>
-	<version>0.4.0</version>
+	<version>0.4.1</version>
 	<packaging>pom</packaging>
 	<name>inepexgwtl</name>
 

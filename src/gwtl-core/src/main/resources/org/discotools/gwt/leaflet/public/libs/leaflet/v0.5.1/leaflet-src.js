@@ -8081,7 +8081,8 @@ L.PosAnimation = L.DomUtil.TRANSITION ? L.PosAnimation : L.PosAnimation.extend({
  */
 
 L.Map.mergeOptions({
-	zoomAnimation: L.DomUtil.TRANSITION && !L.Browser.android23 && !L.Browser.mobileOpera
+	zoomAnimation: L.DomUtil.TRANSITION && !L.Browser.android23 && !L.Browser.mobileOpera,
+	zoomAnimationThreshold: 4 
 });
 
 if (L.DomUtil.TRANSITION) {
@@ -8095,6 +8096,9 @@ L.Map.include(!L.DomUtil.TRANSITION ? {} : {
 	_zoomToIfClose: function (center, zoom) {
 
 		if (this._animatingZoom) { return true; }
+		
+		// don't animate if zoom difference is too large
+		if (Math.abs(zoom - this._zoom) > this.options.zoomAnimationThreshold) { return false; } 
 
 		if (!this.options.zoomAnimation) { return false; }
 
