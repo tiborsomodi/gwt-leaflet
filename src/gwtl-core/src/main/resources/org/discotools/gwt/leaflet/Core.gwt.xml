@@ -7,8 +7,8 @@
 	<inherits name="com.google.gwt.json.JSON" />
 	
 	<!-- Ensure Leaflet script and styles are pre-loaded -->
-	<script     src="libs/leaflet/v0.5.1/leaflet-src.js" />
-	<stylesheet src="libs/leaflet/v0.5.1/leaflet.css" />
+	<script     src="libs/leaflet/v0.6.4/leaflet-src.js" />
+	<stylesheet src="libs/leaflet/v0.6.4/leaflet.css" />
     <!-- Add to host page
      <!- -[if lte IE 8]>
         <link rel="stylesheet" href="lib/leaflet/v0.4.5/leaflet.ie.css" />

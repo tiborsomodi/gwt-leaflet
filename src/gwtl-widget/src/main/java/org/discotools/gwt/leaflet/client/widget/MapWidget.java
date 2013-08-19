@@ -47,16 +47,11 @@ public class MapWidget extends Composite {
 	}
 	
 	public MapWidget(String name) {
-
 		// Show it in a 'div' element
 		initWidget(new HTMLPanel(
 			"<div id=\""
 					+ name
-					+ "\" style=\"width:100%; height: 100%; position: relative;\">" +
-					
-				"MapPane: " + name + 
-				
-			"</div>"
+					+ "\" style=\"width:100%; height: 100%; position: relative;\"></div>"
 		));
 		
 	}
