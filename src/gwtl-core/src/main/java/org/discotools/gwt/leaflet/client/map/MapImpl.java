@@ -11,32 +11,26 @@ import com.google.gwt.dom.client.Element;
 class MapImpl {
  
 	public static native JSObject create(String name, JSObject options) /*-{
-	
 		// Verify map place holder element exists
 		var div = $doc.getElementById(name);		
 		if(typeof(div) === 'undefined' || div === null) {
 			throw "Element '"+name+"' does not exist";
 		}
+		return @org.discotools.gwt.leaflet.client.map.MapImpl::create(Lcom/google/gwt/dom/client/Element;Lorg/discotools/gwt/leaflet/client/jsobject/JSObject;)(div, options);
+	}-*/;
+	
+	public static native JSObject create(Element e, JSObject options) /*-{
+		var div = e;	
 		
 		// Initialize maps array?
 		if($wnd.gwtl === undefined) {
 			$wnd.gwtl = [];
 			$wnd.gwtl.maps = [];
 		}
-	
-		// 'name' is also used by third-party javascript, rename to prevent mangling.
-		var _name = name;
 		
 		// Initialize the map on the "name" div with a given center and zoom
-		var map = $wnd.L.map(name, options);
-			
-		// Set gwt attributes
-		map.gwt = [];
-		map.gwt.name = _name;
-	
-		// Associate map instance with given name
-		$wnd.gwtl.maps[_name] = map;
-		
+		var map = $wnd.L.map(div, options);
+				
 		// Finished
 		return map; 
 	}-*/;

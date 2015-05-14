@@ -34,7 +34,11 @@ public class Map extends JSObjectWrapper implements EventProvider {
     
     public Map(String name, MapOptions options) {
         this(MapImpl.create(name, options.getJSObject()));
-    } 
+    }
+    
+    public Map(Element e, MapOptions options) {
+        this(MapImpl.create(e, options.getJSObject()));
+    }
     
     /**
      * Sets the view of the map (geographical center and zoom).

@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.discotools.gwt.leaflet</groupId>
 		<artifactId>inepexgwtl</artifactId>
-		<version>0.5.2</version>
+		<version>0.5.3</version>
 	</parent>
 
 	<artifactId>inepexgwtl-example</artifactId>
@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>org.discotools.gwt.leaflet</groupId>
 			<artifactId>inepexgwtl-widget</artifactId>
-			<version>0.5.2</version>
+			<version>0.5.3</version>
 		</dependency>
 	</dependencies>
 	
